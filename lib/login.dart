@@ -28,7 +28,7 @@ class Login extends StatelessWidget {
                         child: Text(
                           'Skip',
                           style: TextStyle(
-                            color: AppColors.grey,
+                            color: AppColors.lightGrey,
                             fontSize: 25,
                             fontFamily: 'Source Sans Pro',
                           ),
