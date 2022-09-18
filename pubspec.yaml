@@ -64,6 +64,10 @@ flutter:
     - family: Merriweather
       fonts:
         - asset: fonts/Merriweather-Regular.ttf
+
+    - family: Source Sans Pro
+      fonts:
+        - asset: fonts/SourceSansPro-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
