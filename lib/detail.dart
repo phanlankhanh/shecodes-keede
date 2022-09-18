@@ -79,15 +79,16 @@ class DetailPage extends StatelessWidget {
                   height: 50,
                   width: 150,
                   decoration: BoxDecoration(
-                      color: AppColors.lightGrey,
+                      color: AppColors.darkPurple,
                       borderRadius: BorderRadius.circular(10)),
                   child: Center(
                     child: Text(
-                      'Added',
+                      'Add to Plan',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Merriweather"),
                     ),
                   ),
                 ),
@@ -103,7 +104,8 @@ class DetailPage extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Merriweather"),
                     ),
                   ),
                 ),

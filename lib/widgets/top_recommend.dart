@@ -23,20 +23,19 @@ class topRec extends StatelessWidget {
             child: Stack(
               children: [
                 Padding(
-                  padding:
-                      const EdgeInsets.only(top: 10, right: 20, bottom: 10),
+                  padding: const EdgeInsets.only(top: 10, right: 20, bottom: 0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
                       travel.url,
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.width,
+                      // width: ,
+                      height: 400,
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
                 Positioned(
-                  bottom: 30,
+                  bottom: 60,
                   left: 20,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

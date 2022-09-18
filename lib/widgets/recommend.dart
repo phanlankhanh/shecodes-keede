@@ -23,9 +23,9 @@ class MostPopular extends StatelessWidget {
                 ClipRRect(
                     borderRadius: BorderRadius.circular(15),
                     child: Image.asset(travel.url,
-                        height: 150, fit: BoxFit.cover)),
+                        height: 200, fit: BoxFit.cover)),
                 Positioned(
-                  bottom: 40,
+                  bottom: 30,
                   left: 15,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
