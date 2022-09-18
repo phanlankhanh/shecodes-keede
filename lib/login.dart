@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter/material.dart';
 import 'package:travel_blog/style/color.dart';
+import 'package:travel_blog/futurePlan.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -21,7 +20,12 @@ class Login extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CreatePlan()));
+                        },
                         child: Text(
                           'Skip',
                           style: TextStyle(
@@ -66,56 +70,142 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
-                // email
-                Padding(
-                  padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Email',
-                      hintStyle: TextStyle(
-                        color: Colors.grey,
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ),
-                ),
-                // password
+                // continue with apple
                 Padding(
                   padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Password',
-                      hintStyle: TextStyle(
-                        color: Colors.grey,
-                      ),
-                      border: OutlineInputBorder(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          'assets/images/apple.png',
+                          width: 20,
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Continue with Apple',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'Source Sans Pro',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.white,
+                      onPrimary: AppColors.black,
+                      shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                   ),
                 ),
-                // forgot password
+                // continue with google
                 Padding(
-                  padding: const EdgeInsets.only(top: 10, right: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Forgot password?',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
+                  padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          'assets/images/google.png',
+                          width: 20,
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Continue with Google',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'Source Sans Pro',
+                            ),
                           ),
                         ),
+                      ],
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.white,
+                      onPrimary: AppColors.black,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                    ],
+                    ),
                   ),
                 ),
-                // login button
+                // continue with facebook
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          'assets/images/facebook.png',
+                          width: 20,
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Continue with Facebook',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'Source Sans Pro',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.white,
+                      onPrimary: AppColors.black,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                ),
+                // continue with phone number
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          'assets/images/phone.png',
+                          width: 20,
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Continue with Phone Number',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: 'Source Sans Pro',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.white,
+                      onPrimary: AppColors.black,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ],
