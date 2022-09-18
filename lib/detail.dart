@@ -73,51 +73,37 @@ class DetailPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              // 2 children with 2 buttons Added & Plan Now
               children: [
-                FlatButton(
-                  onPressed: () {
-                    print("Added");
-                  },
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10),
-                  ),
-                  padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
-                  color: Color(0xff6BA0B0),
-                  child: Text(
-                    "Plan now",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontFamily: "Merriweather",
-                      fontWeight: FontWeight.w900,
+                Container(
+                  height: 50,
+                  width: 150,
+                  decoration: BoxDecoration(
+                      color: AppColors.lightGrey,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Center(
+                    child: Text(
+                      'Added',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
-                FlatButton(
-                  onPressed: () {
-                    print("Added");
-                    Text(
-                      "Added",
+                Container(
+                  height: 50,
+                  width: 150,
+                  decoration: BoxDecoration(
+                      color: AppColors.primary,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Center(
+                    child: Text(
+                      'Plan Now',
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontFamily: "Merriweather",
-                        fontWeight: FontWeight.w900,
-                      ),
-                    );
-                  },
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10),
-                  ),
-                  padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
-                  color: AppColors.darkPurple,
-                  child: Text(
-                    "Add to plan",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontFamily: "Merriweather",
-                      fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),

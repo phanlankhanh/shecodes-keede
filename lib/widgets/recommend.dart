@@ -25,7 +25,7 @@ class MostPopular extends StatelessWidget {
                     child: Image.asset(travel.url,
                         height: 150, fit: BoxFit.cover)),
                 Positioned(
-                  bottom: 30,
+                  bottom: 40,
                   left: 15,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
