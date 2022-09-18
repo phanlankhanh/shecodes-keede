@@ -7,7 +7,6 @@ class AppColors {
   static const iconGray = Color(0xff000000);
   static const primaryGreen = Color(0xff014519);
   static const secondaryGreen = Color(0xffAED6BC);
-  static const grey = Color(0xffA0A0A0);
 
   static const black = Colors.black;
   static const primary = Color(0xff262626);

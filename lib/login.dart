@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:travel_blog/style/color.dart';
-import 'package:travel_blog/futurePlan.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
