@@ -15,7 +15,7 @@ class DetailPage extends StatelessWidget {
       children: [
         CustomScrollView(
           slivers: [
-            _buildSilverHead(),
+            _buildBackground(),
             SliverToBoxAdapter(
               child: _buildDetail(),
             )
@@ -25,7 +25,7 @@ class DetailPage extends StatelessWidget {
           padding: EdgeInsets.only(
               top: MediaQuery.of(context).padding.top, right: 15, left: 15),
           child: SizedBox(
-            height: kToolbarHeight,
+            height: 50,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -43,7 +43,7 @@ class DetailPage extends StatelessWidget {
     ));
   }
 
-  Widget _buildSilverHead() {
+  Widget _buildBackground() {
     return SliverPersistentHeader(
         delegate: DetailSliverDelegate(
             travel: travel,
@@ -64,21 +64,6 @@ class DetailPage extends StatelessWidget {
               style: TextStyle(color: Colors.grey, fontSize: 16, height: 1.5),
             ),
           ),
-
-          // Positioned(
-          //   //         bottom: 0,
-          //   //         right: 30,
-          //   //         child: Container(
-          //   //           width: 60,
-          //   //           height: 60,
-          //   //           decoration: BoxDecoration(
-          //   //               color: AppColors.purple,
-          //   //               // borderRadius: BorderRadius.circular(30)
-          //   //               ),
-          //   //           child: Icon(Icons.arrow_forward,
-          //   //               color: Colors.white, size: 30),
-          //   //         ),
-          //   //       )
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -108,7 +93,7 @@ class DetailPage extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color(0xff6a62b6),
+                    color: AppColors.purple,
                   ),
                   child: Center(
                     child: Text(
@@ -125,43 +110,8 @@ class DetailPage extends StatelessWidget {
               ],
             ),
           ),
-          Text(
-            "Add to plan",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontFamily: "Merriweather",
-              fontWeight: FontWeight.w900,
-            ),
-          ),
-          // SizedBox(height: 160, child: FeaturedWidget()),
-          Expanded(flex: 1, child: MostPopular()),
 
-          // Padding(
-          //   padding: const EdgeInsets.only(right: 150),
-          //   children: [
-
-          // ]
-          // child: Container(
-          //   width: 150,
-          //   height: 60,
-          //   decoration: BoxDecoration(
-          //     color: AppColors.purple,
-          //     borderRadius: BorderRadius.circular(30)
-          //   ),
-          //   child: Text(
-          //     'Add to plan',
-          //     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.white),
-          //   ),
-          // ),
-          // ),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-          //   child: Text(
-          //     '',
-          //     style: TextStyle(color: Colors.grey, fontSize: 16, height: 1.5),
-          //   ),
-          // ),
+          SizedBox(height: 160, child: FeaturedWidget()),
         ],
       ),
     );
@@ -193,7 +143,7 @@ class DetailPage extends StatelessWidget {
                 Text(
                   travel.location,
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 16, color: AppColors.purple
                   ),
                 ),
               ],

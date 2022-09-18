@@ -9,43 +9,28 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      drawer: Drawer(),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 3,
+        leading: Icon(
+          Icons.menu,
+          color: AppColors.purple,
+        ),
+        title: Container(
+            width: 160,
+            child: Image.asset('assets/images/white_logo.png',
+                 fit: BoxFit.cover),
+        ),
+        centerTitle: true,
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 100),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(
-                  Icons.menu,
-                  color: AppColors.purple,
-                ),
-                // SvgPicture.asset(''),
-                Image.asset('assets/images/ktext.png',
-                    width: 160, fit: BoxFit.cover),
-              ],
-            ),
-          ),
-          // Padding(
-          //   padding: const EdgeInsets.only(left: 15),
-          //   child: Image.asset('assets/images/klogo.png', width: 100, fit: BoxFit.cover),
-          //   // child: Text(
-          //   //   'Keede',
-          //   //   style: TextStyle(fontSize: 36),
-          //   // ),
-          // ),
-          // Padding(
-          //   padding: const EdgeInsets.only(left: 10),
-          //   child:
-          // )
+          Icon(Icons.account_circle_rounded, color: AppColors.purple,size: 35,),
         ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(flex: 2, child: TravelBlog()),
+          Expanded(flex: 2, child: topRec()),
           Padding(
             padding: const EdgeInsets.all(15),
             child: Row(
@@ -57,7 +42,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Text(
                   'View All',
-                  style: TextStyle(fontSize: 16, color: Colors.black),
+                  style: TextStyle(fontSize: 16, color: AppColors.purple),
                 )
               ],
             ),

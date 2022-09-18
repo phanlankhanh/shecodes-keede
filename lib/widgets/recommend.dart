@@ -21,7 +21,7 @@ class MostPopular extends StatelessWidget {
             child: Stack(
               children: [
                 ClipRRect(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(15),
                     child: Image.asset(travel.url,
                         height: 150, fit: BoxFit.cover)),
                 Positioned(

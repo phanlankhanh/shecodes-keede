@@ -3,7 +3,7 @@ import 'package:travel_blog/detail.dart';
 import 'package:travel_blog/model/travel.dart';
 import 'package:travel_blog/style/color.dart';
 
-class TravelBlog extends StatelessWidget {
+class topRec extends StatelessWidget {
   final _list = Travel.generateTravelBlog();
   final _pageCtrl = PageController(viewportFraction: 0.9);
 
@@ -24,19 +24,19 @@ class TravelBlog extends StatelessWidget {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsets.only(top: 10, right: 20, bottom: 30),
+                      const EdgeInsets.only(top: 10, right: 20, bottom: 10),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
                       travel.url,
-                      width: MediaQuery.of(context).size.width,
+                      //width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.width,
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
                 Positioned(
-                  bottom: 60,
+                  bottom: 30,
                   left: 20,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
