@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const white = Colors.white;
-  static const purple = Color(0xffa6a6a6);
+  static const purple = Color(0xffB8B1FB);
+  static const darkPurple = Color(0xff6A62B7);
   static const iconGray = Color(0xff000000);
   static const primaryGreen = Color(0xff014519);
   static const secondaryGreen = Color(0xffAED6BC);
