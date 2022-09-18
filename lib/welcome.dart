@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_blog/home.dart';
 import 'package:travel_blog/style/color.dart';
-import 'package:travel_blog/home.dart';
+import 'package:travel_blog/login.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -57,10 +57,8 @@ class WelcomePage extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 20),
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomePage()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Login()));
                       },
                       child: Text('Let’s go →'),
                       style: ElevatedButton.styleFrom(
