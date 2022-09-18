@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travel_blog/home.dart';
 import 'package:travel_blog/style/color.dart';
+import 'package:travel_blog/home.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -26,11 +28,13 @@ class WelcomePage extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 20),
                     child: Text(
                       'New way\nto plan your trip',
+                      textAlign: TextAlign.left,
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w900,
@@ -41,28 +45,38 @@ class WelcomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 10),
                     child: Text(
-                      'Travel Blog is a blog that provides information about travel destinations',
+                      'Create a fully customized day by day\nitinerary for free!',
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.black,
+                        color: AppColors.white,
+                        fontFamily: 'Merriweather',
                       ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 20),
                     child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text('Get Started'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
+                      },
+                      child: Text('Let’s go →'),
                       style: ElevatedButton.styleFrom(
-                        primary: AppColors.purple,
+                        backgroundColor: AppColors.darkPurple,
                         padding: EdgeInsets.symmetric(
-                          horizontal: 100,
+                          horizontal: 20,
                           vertical: 15,
                         ),
                         textStyle: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.values[5],
+                          fontFamily: 'Source Sans Pro',
                         ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.circular(17)), // <-- Radius
                       ),
                     ),
                   ),
