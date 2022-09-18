@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travel_blog/home.dart';
 import 'package:travel_blog/style/color.dart';
 import 'package:travel_blog/login.dart';
 
