@@ -18,13 +18,16 @@ class HomePage extends StatelessWidget {
           color: AppColors.purple,
         ),
         title: Container(
-            width: 160,
-            child: Image.asset('assets/images/white_logo.png',
-                 fit: BoxFit.cover),
+          width: 160,
+          child: Image.asset('assets/images/white_logo.png', fit: BoxFit.cover),
         ),
         centerTitle: true,
         actions: [
-          Icon(Icons.account_circle_rounded, color: AppColors.purple,size: 35,),
+          Icon(
+            Icons.account_circle_rounded,
+            color: AppColors.purple,
+            size: 35,
+          ),
         ],
       ),
       body: Column(
@@ -38,11 +41,19 @@ class HomePage extends StatelessWidget {
               children: [
                 Text(
                   'Recommended',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                    fontFamily: "Merriweather",
+                  ),
                 ),
                 Text(
                   'View All',
-                  style: TextStyle(fontSize: 16, color: AppColors.purple),
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: AppColors.darkPurple,
+                    fontFamily: "Merriweather",
+                  ),
                 )
               ],
             ),

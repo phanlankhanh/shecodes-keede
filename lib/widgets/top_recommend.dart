@@ -29,7 +29,7 @@ class topRec extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
                       travel.url,
-                      //width: MediaQuery.of(context).size.width,
+                      width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.width,
                       fit: BoxFit.cover,
                     ),
@@ -45,34 +45,23 @@ class topRec extends StatelessWidget {
                           color: Colors.transparent,
                           child: Text(travel.location,
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontFamily: 'Merriweather',
-                                  fontWeight: FontWeight.w600))),
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: "Merriweather",
+                              ))),
                       Material(
                           color: Colors.transparent,
                           child: Text(travel.name,
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 30))),
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                fontFamily: "Merriweather",
+                              ))),
                     ],
                   ),
                 ),
-                //       Positioned(
-                //         bottom: 0,
-                //         right: 30,
-                //         child: Container(
-                //           width: 60,
-                //           height: 60,
-                //           decoration: BoxDecoration(
-                //               color: AppColors.purple,
-                //               // borderRadius: BorderRadius.circular(30)
-                //               ),
-                //           child: Icon(Icons.arrow_forward,
-                //               color: Colors.white, size: 30),
-                //         ),
-                //       )
               ],
             ),
           );

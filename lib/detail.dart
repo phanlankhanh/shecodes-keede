@@ -61,56 +61,69 @@ class DetailPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
             child: Text(
               'The road to the tea hill is a beautiful natural scenery. Which any visitor could not help but admire and praise. The tea hill in Dalat has an acreage of ​​about 220 hectares. This place is not only an ideal tourist attraction in Dalat, but also a witness of history.',
-              style: TextStyle(color: Colors.grey, fontSize: 16, height: 1.5),
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 16,
+                height: 1.5,
+                fontFamily: "Merriweather",
+              ),
             ),
           ),
-
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  width: 161,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xffb9d4dc)),
-                  child: Center(
-                    child: Text(
-                      "Plan now",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontFamily: "Merriweather",
-                        fontWeight: FontWeight.w900,
-                      ),
+                FlatButton(
+                  onPressed: () {
+                    print("Added");
+                  },
+                  shape: new RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10),
+                  ),
+                  padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                  color: Color(0xff6BA0B0),
+                  child: Text(
+                    "Plan now",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontFamily: "Merriweather",
+                      fontWeight: FontWeight.w900,
                     ),
                   ),
                 ),
-                Container(
-                  width: 161,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: AppColors.purple,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Add to plan",
+                FlatButton(
+                  onPressed: () {
+                    print("Added");
+                    Text(
+                      "Added",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
                         fontFamily: "Merriweather",
                         fontWeight: FontWeight.w900,
                       ),
+                    );
+                  },
+                  shape: new RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10),
+                  ),
+                  padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                  color: AppColors.darkPurple,
+                  child: Text(
+                    "Add to plan",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontFamily: "Merriweather",
+                      fontWeight: FontWeight.w900,
                     ),
                   ),
                 ),
               ],
             ),
           ),
-
           SizedBox(height: 160, child: FeaturedWidget()),
         ],
       ),
@@ -138,12 +151,18 @@ class DetailPage extends StatelessWidget {
               children: [
                 Text(
                   travel.name,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Merriweather",
+                  ),
                 ),
                 Text(
                   travel.location,
                   style: TextStyle(
-                    fontSize: 16, color: AppColors.purple
+                    fontSize: 16,
+                    color: AppColors.darkPurple,
+                    fontFamily: "Merriweather",
                   ),
                 ),
               ],
@@ -152,7 +171,7 @@ class DetailPage extends StatelessWidget {
           Spacer(),
           Icon(
             Icons.share,
-            color: AppColors.purple,
+            color: AppColors.darkPurple,
           )
         ],
       ),
@@ -201,10 +220,19 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(travel.name,
-                    style: TextStyle(color: Colors.white, fontSize: 30)),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w900,
+                      fontFamily: "Merriweather",
+                    )),
                 Text(
                   travel.location,
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontFamily: "Merriweather",
+                  ),
                 )
               ],
             ))

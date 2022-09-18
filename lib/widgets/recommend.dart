@@ -34,14 +34,19 @@ class MostPopular extends StatelessWidget {
                           color: Colors.transparent,
                           child: Text(travel.location,
                               style: TextStyle(
-                                  color: Colors.white, fontSize: 15))),
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontFamily: "Merriweather",
+                              ))),
                       Material(
                           color: Colors.transparent,
                           child: Text(travel.name,
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20)))
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                fontFamily: "Merriweather",
+                              )))
                     ],
                   ),
                 )
