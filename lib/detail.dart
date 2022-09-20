@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_blog/model/travel.dart';
 import 'package:travel_blog/style/color.dart';
-import 'package:travel_blog/widgets/recommend.dart';
 
 class DetailPage extends StatelessWidget {
   final Travel travel;
