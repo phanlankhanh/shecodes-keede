@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_blog/home.dart';
+import 'package:travel_blog/createPlan.dart';
 import 'package:travel_blog/style/color.dart';
 
 class Login extends StatelessWidget {
@@ -24,7 +24,7 @@ class Login extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomePage()));
+                                  builder: (context) => NewPlan()));
                         },
                         child: Text(
                           'Skip',
